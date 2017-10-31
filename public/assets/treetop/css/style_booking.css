@@ -1,0 +1,146 @@
+#booking {
+  display: none;
+}
+
+.form-header {
+  text-align: left;
+}
+.form-header h2 {
+  margin: 0px 0px 4px;
+  color: rgba(0, 0, 0, 0.56);
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-shadow: none;
+  border-bottom: 2px solid #FBB827;
+}
+.form-header p {
+  margin: 0px;
+  padding: 0px;
+  font-size: 1.6rem;
+  line-height: 30px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+}
+
+#branch {
+  margin: 60px auto 20px;
+}
+@media screen and (max-width: 991px) {
+  #branch {
+    margin: 30px auto 0px;
+  }
+}
+#branch h4 {
+  display: block;
+  font-size: 4rem;
+  padding: 0px 20px 20px;
+  opacity: 1;
+}
+#branch > .row {
+  width: 100%;
+  max-width: 940px;
+  /*padding: 0px 60px;*/
+  margin: auto;
+}
+@media screen and (max-width: 991px) {
+  #branch > .row {
+    padding: 0px;
+  }
+}
+#branch .branchs {
+  margin: 120px auto 20px;
+  height: 100px;
+}
+@media screen and (max-width: 991px) {
+  #branch .branchs {
+    margin: 0px auto 20px;
+  }
+}
+#branch .branchs.active > .branch {
+  opacity: 0.2;
+}
+#branch .branchs:hover .branch {
+  opacity: 0.2;
+}
+#branch .branch {
+  display: inline-block;
+  padding: 0px 4px;
+  float: left;
+  width: 20%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+@media screen and (max-width: 991px) {
+  #branch .branch {
+    width: 100%;
+  }
+}
+#branch .branch:hover {
+  opacity: 1 !important;
+}
+#branch .branch.active {
+  /*height: 160px;*/
+  opacity: 1 !important;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+#branch .branch .branch-img {
+  position: relative;
+  width: 100%;
+  /*height: calc(100vh - 350px);*/
+  /*padding-bottom: 280%; */
+  /*height: calc(20vw * 2.8 - (300px));*/
+  /*height: 240px;*/
+  height: 1px;
+  /*max-height: calc(100vh - 350px);*/
+  background-image: none !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+@media screen and (max-width: 991px) {
+  #branch .branch .branch-img {
+    height: 100px;
+    background-image: none !important;
+    max-height: none;
+  }
+}
+#branch .branch .branch-icon {
+  position: absolute;
+  bottom: calc(0% - 74px);
+  height: 150px;
+  width: 100%;
+  background-image: url("../image/branch01i.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 991px) {
+  #branch .branch .branch-icon {
+    height: 70px;
+    width: 70px;
+    position: static;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+#branch .branch .branch-label {
+  position: absolute;
+  bottom: calc(0% - 100px);
+  width: 100%;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+@media screen and (max-width: 991px) {
+  #branch .branch .branch-label {
+    position: static;
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+}

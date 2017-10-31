@@ -1,0 +1,171 @@
+#lander {
+	height: 70vh;
+	padding-top: 35vh;
+	text-align: center;
+	color: white;
+
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	text-transform: uppercase;
+
+	@media screen and (max-width: 991px) {
+		text-align: center;
+	}
+	a{}
+	> div {
+		transform: translateY(-50%);
+	}
+	h2 {
+		margin: 0px;
+		font-size: 6rem;
+		line-height: 4rem;
+
+		@media screen and (max-width: 991px) {
+			font-size: 13vw;
+		}
+	}
+	> div {
+		max-width: 1000px;
+		margin: auto;
+
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+
+}
+#intro {
+	background-color: white;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+
+	a{}
+	.about-tabs {
+		display: flex;
+		width: 100%;
+		max-width: 900px;
+		margin: auto;
+		a{}
+		.about-tab {
+			position: relative;
+			width: 100%;
+
+
+			color: rgb(171, 171, 171);
+			font-size: 1.6rem;
+			font-weight: 500;
+			line-height: 70px;
+			text-align: center;
+			text-transform: uppercase;
+
+			cursor: pointer;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;     
+			transition: 0.3s;
+
+			a{}
+			> div {
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				top: 100%;
+
+				background-color: rgb(169, 124, 28);
+
+				transition: 0.3s;
+			}
+			&:hover {
+				color: rgb(169, 124, 28);
+			}
+		}
+	}
+}
+h3 {
+	font-size: 3rem;
+	font-family: "Mitr";
+	color: rgb(187, 128, 0);
+}
+#safety-info, #safety-equipment, #safety-warning, #safety-requirement {
+	margin: auto;
+	max-width: 1200px;
+
+	font-size: 2rem;
+	line-height: 3.4rem;
+	opacity: 0.87;
+	.spacer {
+		height: 100px;
+	}
+	h3 {
+		margin-top: 90px;
+		margin-bottom: 40px;
+		text-transform: uppercase;
+	}
+	p {
+		margin-bottom: 40px;
+	}
+	.safety-img {
+		margin-bottom: 20px;
+		padding-bottom: 66.66%;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		&.alt1 {
+			padding-bottom: 100%;
+			background-size: contain;
+			border: 1px solid rgba(0,0,0,0.3);
+		}
+	}
+}
+#safety-requirement {
+	max-width: none;
+	margin: auto;
+	padding: 40px 6px;
+	background-image: url('../image/bg_safety02.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	color: white;
+
+	a{}
+	.spacer {
+		height: 40px;
+	}
+	h3 {
+		margin-bottom: 0px;
+		text-align: center;
+		font-size: 4rem;
+		color: rgb(255, 255, 255);
+	}
+	.headsub {
+		font-size: 2.8rem;
+		font-weight: 400;
+		display: block;
+		text-align: center;
+	}
+	.requirements {
+		max-width: 1200px;
+		margin: 60px auto 40px;
+	}
+	.requirement {
+		padding: 0px 10px;
+		font-size: 1.5rem;
+		font-weight: 300;
+		line-height: 2.5rem;
+		a{}
+		.requirement-img {
+			height: 100px;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.requirement-text {
+			margin-top: 20px;
+			text-align: center;
+		}
+	}
+}

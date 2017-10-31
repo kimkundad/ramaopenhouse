@@ -1,0 +1,41 @@
+#sld01 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url("image/sld01.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#sld01 .g01 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+#sld01 .g01 label {
+  /*color: #FBB827;*/
+  color: white;
+  line-height: 1em;
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+  /*text-shadow: 3px 3px 0px rgba(0,0,0,1),-3px -3px 0px rgba(0,0,0,1),3px -3px 0px rgba(0,0,0,1),-3px 3px 0px rgba(0,0,0,1),3px 0px 0px rgba(0,0,0,1),-3px 0px 0px rgba(0,0,0,1),0px 3px 0px rgba(0,0,0,1),0px -3px 0px rgba(0,0,0,1);*/
+}
+#sld01 .g01 label:nth-of-type(1) {
+  font-size: 1.9em;
+  line-height: 1em;
+  text-align: center;
+  -webkit-transform: scaleX(0.7);
+      -ms-transform: scaleX(0.7);
+          transform: scaleX(0.7);
+}
+#sld01 .g01 label:nth-of-type(2) {
+  font-size: 1em;
+  text-align: center;
+  /*transform: scaleX(0.7);*/
+}

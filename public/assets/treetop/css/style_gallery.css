@@ -1,0 +1,360 @@
+#lander {
+  height: 70vh;
+  padding-top: 35vh;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 991px) {
+  #lander {
+    text-align: center;
+  }
+}
+#lander > div {
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+#lander h2 {
+  margin: 0px;
+  font-size: 5rem;
+  line-height: 4rem;
+}
+@media screen and (max-width: 991px) {
+  #lander h2 {
+    font-size: 13vw;
+  }
+}
+#lander > div {
+  max-width: 1000px;
+  margin: auto;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+#intro {
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+#intro .gallery-tabs {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
+#intro .gallery-tabs .gallery-tab {
+  position: relative;
+  width: 100%;
+  color: #ababab;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 70px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: 0.3s;
+}
+#intro .gallery-tabs .gallery-tab > div {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  top: 100%;
+  background-color: #a97c1c;
+  transition: 0.3s;
+}
+#intro .gallery-tabs .gallery-tab:hover {
+  color: black;
+}
+#intro .gallery-tabs .gallery-tab.active {
+  color: #a97c1c;
+}
+#intro .gallery-tabs .gallery-tab.active > div {
+  top: 90%;
+}
+
+.about-stage h3 {
+  margin: 30px auto;
+  text-align: center;
+  font-size: 3rem;
+}
+
+#galleryfilter {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#galleryfilter .mfilters {
+  margin: 20px 0px 0px;
+  padding: 0px 8px;
+  text-align: right;
+}
+#galleryfilter .mfilters .mfilter {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0.5rem 1.2rem;
+  color: white;
+  cursor: pointer;
+  background-color: gainsboro;
+  transition: 0.3s;
+}
+#galleryfilter .mfilters .mfilter.active {
+  background-color: #fba427;
+}
+#galleryfilter .filtr-container .item-desc {
+  display: none;
+}
+#galleryfilter .filtr-item {
+  cursor: pointer;
+}
+#galleryfilter .filtr-item .img-responsive {
+  padding-bottom: 66%;
+  background-size: cover;
+  background-position: center;
+}
+#galleryfilter .filtr-item.filtr-vid > div {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay;
+}
+#galleryfilter .filtr-item.filtr-vid > div:before {
+  font-family: 'FontAwesome';
+  content: "\f04b";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 7vw;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+#whatis {
+  padding: 50px 10px;
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 300;
+  text-align: center;
+  background-image: url("../image/bg_whatis01.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#whatis > div {
+  margin: auto;
+  max-width: 700px;
+}
+
+#press {
+  color: #a97c1c;
+}
+#press .press-group {
+  margin: 60px auto;
+  width: 100%;
+  max-width: 1200px;
+  font-size: 0px;
+}
+#press .press-group .press {
+  display: inline-block;
+  width: 25%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#press .press-group .press:hover {
+  opacity: 1;
+}
+#press .press-group .press::after {
+  content: '';
+  display: block;
+  padding-bottom: 66%;
+}
+
+#testimonial {
+  color: white;
+}
+#testimonial .testimonials {
+  padding: 40px 0px;
+  background-image: url("../image/bg_testimonial.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#testimonial .testimonials .tmn-train {
+  white-space: nowrap;
+  overflow: hidden;
+}
+#testimonial .testimonials .tmn-train .tmn-bogie {
+  display: inline-block;
+  width: 100%;
+  /*text-align: center;*/
+}
+#testimonial .testimonials .tmn-train .testimonial {
+  padding: 20px 0px;
+  margin: 40px auto;
+  width: 300px;
+  white-space: normal;
+  transition: 0.3s;
+}
+#testimonial .testimonials .tmn-train .testimonial:nth-child(odd) {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+#testimonial .testimonials .tmn-train .testimonial:nth-child(even) {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+@media screen and (min-width: 991px) {
+  #testimonial .testimonials .tmn-train .testimonial {
+    margin: 0px auto;
+    width: 30%;
+  }
+}
+@media screen and (min-width: 768px) {
+  #testimonial .testimonials .tmn-train .testimonial:nth-child(odd) {
+    -webkit-transform: translateX(-60%);
+        -ms-transform: translateX(-60%);
+            transform: translateX(-60%);
+  }
+  #testimonial .testimonials .tmn-train .testimonial:nth-child(even) {
+    -webkit-transform: translateX(60%);
+        -ms-transform: translateX(60%);
+            transform: translateX(60%);
+  }
+}
+#testimonial .testimonials .tmn-train .tmn-img > div {
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  border: 1px solid white;
+}
+#testimonial .testimonials .tmn-train .tmn-text {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+@media screen and (min-width: 992px) {
+  #testimonial .testimonials .tmn-train .tmn-text {
+    font-size: 1.6rem;
+  }
+}
+#testimonial .testimonials .tmn-train .tmn-text::before {
+  content: '"';
+  position: absolute;
+  top: 0px;
+  left: -20px;
+  font-size: 6rem;
+  line-height: 0px;
+  font-style: italic;
+}
+#testimonial .testimonials .tmn-train .tmn-text::after {
+  content: '"';
+  position: absolute;
+  bottom: -20px;
+  right: 0px;
+  font-size: 6rem;
+  line-height: 0px;
+  font-style: italic;
+}
+#testimonial .reviews {
+  background-image: url("../image/bg_review.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#testimonial .reviews .rv-train {
+  white-space: nowrap;
+  overflow: hidden;
+}
+#testimonial .reviews .rv-train .rv-bogie {
+  display: inline-block;
+  width: 100%;
+  /*text-align: center;*/
+}
+#testimonial .reviews .rv-train .review {
+  padding: 20px 0px;
+  margin: 40px auto;
+  width: 300px;
+  white-space: normal;
+  transition: 0.3s;
+}
+#testimonial .reviews .rv-train .review:nth-child(odd) {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+#testimonial .reviews .rv-train .review:nth-child(even) {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+@media screen and (min-width: 991px) {
+  #testimonial .reviews .rv-train .review {
+    margin: 0px auto;
+    width: 30%;
+  }
+}
+@media screen and (min-width: 768px) {
+  #testimonial .reviews .rv-train .review:nth-child(odd) {
+    -webkit-transform: translateX(-60%);
+        -ms-transform: translateX(-60%);
+            transform: translateX(-60%);
+  }
+  #testimonial .reviews .rv-train .review:nth-child(even) {
+    -webkit-transform: translateX(60%);
+        -ms-transform: translateX(60%);
+            transform: translateX(60%);
+  }
+}
+#testimonial .reviews .rv-train .rv-img > div {
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  border: 1px solid white;
+}
+#testimonial .reviews .rv-train .rv-text {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+@media screen and (min-width: 992px) {
+  #testimonial .reviews .rv-train .rv-text {
+    font-size: 1.6rem;
+  }
+}
+#testimonial .reviews .rv-train .rv-text::before {
+  content: '"';
+  position: absolute;
+  top: 0px;
+  left: -20px;
+  font-size: 6rem;
+  line-height: 0px;
+  font-style: italic;
+}
+#testimonial .reviews .rv-train .rv-text::after {
+  content: '"';
+  position: absolute;
+  bottom: -20px;
+  right: 0px;
+  font-size: 6rem;
+  line-height: 0px;
+  font-style: italic;
+}

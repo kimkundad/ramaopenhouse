@@ -33,5 +33,6 @@ Route::get('/thanks_registration', 'HomeController@thanks_registration');
 Route::group(['middleware' => 'admin'], function() {
 
   Route::resource('admin/dashboard', 'DashboardController');
+  Route::resource('admin/user_regis', 'User_regisController');
 
 });

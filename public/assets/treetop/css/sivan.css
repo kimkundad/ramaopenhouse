@@ -1,0 +1,20 @@
+.nopadding {
+	padding: 0px;
+}
+.nomargin {
+	margin: 0px;
+}
+.noselect {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;      
+}
+.clear {
+	clear: both;
+}
+
+a,a:hover,a:active {
+	text-decoration: none;
+	color: inherit;
+}

@@ -1,0 +1,440 @@
+#lander {
+  height: 70vh;
+  padding-top: 35vh;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 991px) {
+  #lander {
+    text-align: center;
+  }
+}
+#lander > div {
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+#lander h2 {
+  margin: 0px;
+  font-size: 6rem;
+  line-height: 4rem;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.52);
+}
+@media screen and (max-width: 991px) {
+  #lander h2 {
+    font-size: 13vw;
+  }
+}
+#lander > div {
+  max-width: 1000px;
+  margin: auto;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.52);
+}
+
+#intro {
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+#intro #viewstage {
+  -webkit-transform: translateY(-40px);
+      -ms-transform: translateY(-40px);
+          transform: translateY(-40px);
+  background-color: red;
+}
+#intro .about-tabs {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
+#intro .about-tabs .about-tab {
+  position: relative;
+  width: 100%;
+  color: #ababab;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 70px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: 0.3s;
+}
+#intro .about-tabs .about-tab .tab-svg {
+  margin-top: 6%;
+  height: 60px;
+  position: relative;
+}
+#intro .about-tabs .about-tab .tab-svg svg {
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  fill: #ababab;
+  transition: 0.3s;
+}
+#intro .about-tabs .about-tab .tab-label {
+  line-height: 40px;
+  padding: 0px 0px 7%;
+}
+#intro .about-tabs .about-tab .tab-highlight {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  top: 100%;
+  background-color: #a97c1c;
+  transition: 0.3s;
+}
+#intro .about-tabs .about-tab:hover {
+  color: black;
+}
+#intro .about-tabs .about-tab:hover svg {
+  fill: black;
+}
+#intro .about-tabs .about-tab.active {
+  color: #a97c1c;
+}
+#intro .about-tabs .about-tab.active .tab-highlight {
+  top: 95%;
+}
+#intro .about-tabs .about-tab.active svg {
+  fill: #a97c1c;
+}
+
+.about-stage {
+  display: none;
+}
+@media screen and (max-width: 991px) {
+  .about-stage {
+    display: block !important;
+  }
+}
+.about-stage.active {
+  display: block;
+  -webkit-animation: fade-in 0.3s;
+          animation: fade-in 0.3s;
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.about-stage h3 {
+  margin: 30px auto;
+  text-align: center;
+  font-size: 3rem;
+}
+
+#whatis #whatis_1 {
+  padding: 10% 10px;
+  min-height: 90vh;
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 300;
+  text-align: center;
+  background-image: url("../image/bg_whatis01.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#whatis #whatis_1 h3 {
+  text-align: left;
+  font-size: 2em;
+}
+#whatis #whatis_1 > .row {
+  margin: auto;
+  max-width: 1200px;
+  font-size: 2rem;
+  text-align: left;
+  line-height: 3rem;
+}
+#whatis #whatis_2 {
+  padding: 50px 10px;
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 300;
+  text-align: center;
+  background-image: url("../image/bg_whatis01.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#whatis #whatis_2 .row {
+  margin: auto;
+  max-width: 920px;
+}
+#whatis #whatis_3 {
+  padding: 50px 10px;
+  color: #5f5f5f;
+  font-size: 1.7rem;
+  font-weight: 300;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#whatis #whatis_3 h3 {
+  font-size: 2em;
+  color: #B08213;
+  text-align: right;
+}
+#whatis #whatis_3 p {
+  font-size: 2rem;
+  line-height: 3.3rem;
+  font-weight: 400;
+  text-align: right;
+}
+#whatis #whatis_3 .row {
+  margin: auto;
+  max-width: 1200px;
+}
+#whatis #whatis_3 .whatis-img {
+  width: 100%;
+  margin-bottom: 30px;
+  padding-bottom: 55%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#press {
+  color: #a97c1c;
+}
+#press .press-group {
+  margin: 60px auto;
+  width: 100%;
+  max-width: 1200px;
+  font-size: 0px;
+}
+#press .press-group .press {
+  display: inline-block;
+  width: 25%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#press .press-group .press:hover {
+  opacity: 1;
+}
+#press .press-group .press::after {
+  content: '';
+  display: block;
+  padding-bottom: 66%;
+}
+
+#testimonial {
+  color: white;
+}
+#testimonial .svt-substation {
+  position: relative;
+}
+#testimonial .svt-train {
+  white-space: nowrap;
+  transition: 0.5s;
+}
+#testimonial .svt-train .svt-bogie {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+#testimonial .svt-train .svt-room {
+  padding: 20px 0px;
+  margin-top: 60px;
+  white-space: normal;
+  transition: 0.3s;
+  /*&:nth-child(odd) {transform: none;}*/
+  /*&:nth-child(even) {transform: none;}*/
+}
+@media screen and (min-width: 768px) {
+  #testimonial .svt-train .svt-room {
+    max-width: 480px;
+    /*&:nth-child(odd) {transform: translateX(-60%);}*/
+    /*&:nth-child(even) {transform: translateX(60%);}*/
+  }
+}
+@media screen and (min-width: 991px) {
+  #testimonial .svt-train .svt-room {
+    width: 70%;
+  }
+}
+#testimonial .svt-train .svt-img > div {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  border: 1px solid white;
+}
+#testimonial .svt-train .svt-text {
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding-top: 6px;
+}
+@media screen and (min-width: 992px) {
+  #testimonial .svt-train .svt-text {
+    padding: 0px;
+    font-size: 1.6rem;
+  }
+}
+#testimonial .svt-train .svt-text::before {
+  content: '"';
+  display: inline-block;
+  /*font-style: italic;*/
+  -webkit-transform: translate(-14px, 6px) scale(2.4);
+      -ms-transform: translate(-14px, 6px) scale(2.4);
+          transform: translate(-14px, 6px) scale(2.4);
+  float: left;
+  width: 0px;
+  /*position: absolute;*/
+  /*top: 0px;*/
+  /*left: -10px;*/
+  /*font-size: 6rem;*/
+  /*line-height: 0px;*/
+}
+#testimonial .svt-train .svt-text::after {
+  content: '"';
+  display: inline-block;
+  /*font-style: italic;*/
+  -webkit-transform: translate(0px, 6px) scale(2.4);
+      -ms-transform: translate(0px, 6px) scale(2.4);
+          transform: translate(0px, 6px) scale(2.4);
+  /*position: absolute;*/
+  /*bottom: -24px;*/
+  /*right: 20px;*/
+  /*font-size: 6rem;*/
+  /*line-height: 0px;*/
+  /*font-style: italic;*/
+}
+#testimonial .testimonials {
+  position: relative;
+  padding: 40px 0px 10px;
+  background-image: url("../image/bg_testimonial.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+#testimonial .testimonials .svt-train .svt-bogie > div:first-child > .svt-room {
+  float: right;
+}
+#testimonial .testimonials .svt-train .svt-bogie > div:first-child > .svt-room:first-child {
+  margin-top: 0px;
+}
+#testimonial .reviews {
+  position: relative;
+  padding: 10px 0px;
+  background-image: url("../image/bg_review.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+#testimonial .reviews .trip-logo {
+  height: 24px;
+  width: 100%;
+  margin-top: -10px;
+  margin-bottom: 40px;
+  background-image: url("../image/review/tripadvisor.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#testimonial .reviews .svt-substation {
+  display: none;
+}
+#testimonial .reviews .svt-substation.active {
+  display: block;
+}
+#testimonial .reviews .svt-train .svt-bogie > div:first-child > .svt-room {
+  float: right;
+}
+#testimonial .reviews .svt-train .svt-bogie > div:first-child > .svt-room:first-child {
+  /*margin-top: 0px;*/
+}
+#testimonial .sub-tabs {
+  padding-left: 32px;
+  font-size: 0px;
+  max-width: 1000px;
+  margin: auto;
+}
+#testimonial .sub-tabs .sub-tab {
+  position: relative;
+  display: inline-block;
+  padding: 0px 10px 0px 0px;
+  margin-right: 10px;
+  line-height: 60px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 2rem;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#testimonial .sub-tabs .sub-tab > div {
+  position: absolute;
+  bottom: -6px;
+  left: 0px;
+  width: 100%;
+  height: 6px;
+  background-color: white;
+  transition: 0.3s;
+}
+#testimonial .sub-tabs .sub-tab.active {
+  color: white;
+}
+#testimonial .sub-tabs .sub-tab.active > div {
+  bottom: 0px;
+}
+#testimonial .train-left {
+  position: absolute;
+  top: 0px;
+  right: 60%;
+  bottom: 0px;
+  left: 0px;
+}
+#testimonial .train-right {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 60%;
+}
+
+.indicators .indicator {
+  border-color: white;
+}
+.indicators .indicator.active > div {
+  background-color: white;
+}

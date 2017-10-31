@@ -1,0 +1,120 @@
+#lander {
+	/*height: 500px;*/
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: calc(100vh - 152px - 100px);
+
+	div{
+		position: absolute;
+		top: 40%;
+		width: 100%;
+
+		color: white;
+		font-size: 5rem;
+		text-align: center;
+
+	}
+}
+#intro {
+	padding: 34px 0px;
+	text-align: center;
+
+	background-color: #f6f5ee;
+	box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+	background-image: url('../image/bg-intro.png');
+	background-size: cover;
+	background-position: center;
+
+	font-size: 1.6rem;
+	color: rgb(138, 138, 138);
+	line-height: 2rem;
+	text-align: center;
+
+	a{}
+	.intro-icons {
+		display: flex;
+		justify-content: space-around;
+		max-width: 600px;
+		margin: -95px auto 0px;
+		/*margin-top: -50%;*/
+		a{}
+		.intro-icon {
+			/*margin: 0px 100px;*/
+			height: 120px;
+			width: 120px;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+	h4 {
+		color: rgb(175, 119, 0);
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+}
+#service {
+	a{}
+	.service {
+		font-size: 0px;
+		overflow: hidden;
+		a{}
+		.service-img {
+			display: inline-block;
+			height: 50vh;
+			width: 15%;
+			vertical-align: top;
+
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			overflow: hidden;
+			/*filter: blur(3px);*/
+			@media screen and (max-width: 991px) {
+				display: none;
+			}
+		}
+		.service-text {
+			display: inline-block;
+			height: 50vh;
+			width: 85%;
+			padding: 40px 30% 40px 40px;
+
+			font-size: 1.6rem;
+			color: rgb(138, 138, 138);
+			line-height: 2.2rem;
+			font-weight: 300;
+
+			border-bottom: 1px solid rgba(128, 128, 128, 0.08);
+			box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+			vertical-align: top;
+
+			@media screen and (max-width: 991px) {
+				padding: 20px 10px;
+				width: 100%;
+				height: auto;
+			}
+			a{}
+			h4 {
+				color: rgb(175, 119, 0);
+				margin-bottom: 30px;
+				font-weight: 500;
+				text-transform: uppercase;
+
+				> div {
+					display: inline-block;
+					height: 50px;
+					width: 50px;
+					margin-right: 10px;
+					vertical-align: middle;
+
+					background-size: contain;
+					background-position: center;
+					background-repeat: no-repeat;
+
+				}
+			}
+		}
+	}
+}

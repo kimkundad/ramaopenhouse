@@ -1,0 +1,512 @@
+#lander {
+	height: 50vh;
+	padding-top: 20vh;
+	text-align: right;
+	color: white;
+
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	@media screen and (max-width: 991px) {
+		text-align: center;
+	}
+	a{}
+	h1 {
+		margin: 0px;
+		font-size: 5rem;
+		line-height: 3rem;
+
+		@media screen and (max-width: 991px) {
+			font-size: 13vw;
+		}
+	}
+	> div {
+		max-width: 1000px;
+		margin: auto;
+
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+
+}
+#intro {
+	padding: 20px 0px;
+
+	text-align: center;
+	font-size: 0rem;
+	color: rgb(138, 138, 138);
+	line-height: 2rem;
+	text-align: center;
+
+	background-color: rgb(246, 245, 238);
+	box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+	background-image: url(../image/bg-intro.png);
+	background-size: cover;
+	background-position: center;
+
+	a{}
+	.intro-icons {
+		display: inline-block;
+		width: 25%;
+		margin: -225px auto -100px;
+		vertical-align: middle;
+
+		@media screen and (max-width: 991px) {
+			width: 100%;
+			margin: -87px auto -100px;
+		}
+		a{}
+		.intro-icon {
+			height: 180px;
+			width: 180px;
+			margin: auto;
+
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+
+			@media screen and (max-width: 991px) {
+				height: 120px;
+				width: 120px;
+			}
+		}
+
+	}		
+	.intro-tabs {
+		display: inline-block;
+		width: 75%;
+		max-width: 600px;
+		margin-top: 0px;
+		vertical-align: middle;
+		@media screen and (max-width: 991px) {
+			display: none;
+		}
+		a{}
+		.intro-tab {
+			display: inline-block;
+			width: 25%;
+			float: left;
+			font-size: 1.6rem;
+			text-transform: capitalize;
+		}
+	}
+}
+
+#pros {
+	display: none;
+	.pros {
+		background-color: rgb(0, 154, 212);
+		height: 500px;
+	}
+}
+#branch-gallery {
+	padding-top: 60px;
+	a{}
+	.main-gallery {
+		text-align: center;
+		font-size: 0px;
+		a{}
+		.gallery-group {
+			display: inline-block;
+			width: 50%;
+
+			@media screen and (max-width: 991px) {
+				width: 100%;
+			}
+			a{}
+			.gallery-img {
+				position: relative;
+				height: 35vw;
+
+				@media screen and (max-width: 991px) {
+					height: 70vw;
+				}
+				a{}
+				> div {
+					position: absolute;
+					top: 5px;
+					bottom: 5px;
+					left: 5px;
+					right: 5px;
+
+					background-color: lightgrey;
+					background-size: cover;
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+			}
+			&.mini {
+				width: 25%;
+				@media screen and (max-width: 991px) {
+					width: 100%;
+				}
+				a{}
+				.gallery-img {
+					height: 17.5vw;
+					@media screen and (max-width: 991px) {
+						display: inline-block;
+						width: 50%;
+						height: 35vw;
+					}
+				}
+			}
+		}
+	}
+	.main-gallerylink {
+		max-width: 75%;
+		margin: auto;
+		text-align: right;
+		> div {
+
+		}
+	}
+	.ig-stage {
+		position: relative;
+		width: 100%;
+		padding: 0px 0px 40px;
+		font-size: 0px;
+
+		a{}
+		.ig-rail{
+			position: relative;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+		.ig-train {
+			width: 100%;
+			transform: translateX(-12.5%);
+			@media screen and (max-width: 991px) {
+				transform: translateX(0vw);
+			}
+		}
+		.gallery-group {
+			display: inline-block;
+			width: 16.66%;
+			vertical-align: top;
+
+			@media screen and (max-width: 991px) {
+				width: 33.33%;
+			}
+			a{}
+			&.big {
+				width: 25%;
+				@media screen and (max-width: 991px) {
+					width: 66.66%;
+				}
+				a{}
+				> .gallery-img {
+					height: 16.6vw;
+					@media screen and (max-width: 991px) {
+						height: 66.66vw;
+					}
+				}
+			}
+		}
+		.gallery-img {
+			position: relative;
+			/*padding: 20px;*/
+			height: 16.66vw;
+			@media screen and (max-width: 991px) {
+				height: 33.33vw;
+			}
+			a{}
+			> div{
+				position: absolute;
+				top: 5px;
+				left: 5px;
+				right: 5px;
+				bottom: 5px;
+				/*width: 100%;*/
+				/*height: 22.21vw;*/
+
+				background-color: lightgrey;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+		}
+		.ig-btn {
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			width: 12.5%;
+			background-color: white;
+			opacity: 0.7;
+			z-index: 300;
+
+			@media screen and (max-width: 991px) {
+				opacity: 0;
+			}
+			a{}
+			&.next{
+				right: 0px;
+			}
+			&.prev{
+				left: 0px;
+			}
+		}
+	}
+}
+#introduction {
+	max-width: 1100px;
+	margin: 0px auto 20px;
+	a{}
+	h4 {
+		font-size: 3rem;
+		color: rgb(0, 185, 255);
+	}
+	> div {
+		padding: 30px;
+		font-size: 1.45rem;
+		color: rgba(0, 0, 0, 0.6);
+		line-height: 2.4rem;
+		text-align: left;
+
+		@media screen and (max-width: 991px) {
+			padding: 0px 10px 20px;
+		}
+	}
+	.spacesymbol {
+		height: 100px;
+		background-size: 80px;
+		background-position: left;
+		@media screen and (max-width: 991px) {
+			display: none;
+		}
+	}
+}
+#map {
+	color: rgb(255, 255, 255);
+	background-color: #E5E3DF;
+
+	a{}
+	.map {
+		font-size: 0px;
+		a{}
+		iframe {
+			height: 50vh;
+			width: 100%;
+
+			@media screen and (max-width: 991px) {
+				height: 50vh !important;
+			}
+		}
+	}
+	.map-descript {
+		padding: 40px 40px 80px;
+		background-color: rgb(0, 185, 255);
+	}
+}
+#travel {
+	/*height: 700px;*/
+	padding: 60px 0px;
+	background-color: rgb(0, 154, 212);
+	background-image: url('../image/bg-rust.png');
+	/*background-size: cover;*/
+	/*background-position: center;*/
+	/*background-repeat: no-repeat;*/
+
+	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.6) inset;
+
+	@media screen and (max-width: 991px) {
+		padding: 0px;
+	}
+	a{}
+	.passport {
+		width: 80%;
+		margin: auto;
+		font-size: 0px;
+
+		@media screen and (max-width: 991px) {
+			width: 100%;
+		}
+		a{}
+		.passport-tabs{
+			width: 70px;
+			display: inline-block;
+
+			box-shadow: 2px 6px 4px rgba(0, 0, 0, 0.3);
+			border-radius: 10px 0px 0px 10px;
+			overflow: hidden;
+
+			@media screen and (max-width: 991px) {
+				display: flex;
+				width: 100%;
+
+				border-radius: 10px 10px 0px 0px;
+			}
+			a{}
+			> div {
+				width: 70px;
+				line-height: 70px;
+				padding: 0px;
+
+				color: grey;
+				font-size: 3rem;
+				text-align: center;
+				cursor: pointer;
+
+				background-color: rgb(175, 175, 175);
+
+				@media screen and (max-width: 991px) {
+					width: 100%;
+					display: inline-block;
+				}
+				a{}
+				&.active {
+					color: #00B9FF;
+					background-color: white;
+				}
+			}
+		}
+		.passport-page{
+			display: inline-block;
+			width: 80%;
+			min-height: 400px;
+			padding: 40px 40px 80px;
+			vertical-align: top;
+
+			border-radius: 0px 3px 3px 3px;
+			background-color: white;
+			box-shadow: 2px 6px 4px rgba(0, 0, 0, 0.3);
+
+			@media screen and (max-width: 991px) {
+				width: 100%;
+				padding: 20px 10px 40px;
+				min-height: 200px;
+			}
+			a{}
+			.passport-content{
+				color: rgb(138, 138, 138);
+				font-size: 1.8rem;
+				line-height: 2.7rem;
+
+				display: none;
+
+				@media screen and (max-width: 991px) {
+					font-size: 1.6rem;
+					line-height: 2.3rem;
+				}
+				a{}
+				&.active {
+					display: block;
+				}
+				h3 {
+					color: #00B9FF;
+				}
+				.passport-text {
+					margin-bottom: 30px;
+				}
+				.passport-image {
+					width: 100%;
+					padding: 33.33%;
+					margin-bottom: 24px;
+
+					box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.28);
+					background-size: cover;
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+			}
+		}
+	}
+}
+#pricerate {
+
+	/*height: 100vh;*/
+	padding: 40px 0px;
+	background-image: url('../image/bg-paper.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	a{}
+	.pricerate {
+		max-width: 800px;
+		margin: auto;
+		a{}
+		h3 {
+			margin: 0px 0px 20px;
+			font-size: 3rem;
+			color: rgb(0, 110, 152);
+		}
+		h4 {
+			margin-top: 20px;
+			font-size: 2rem;
+			color: rgb(0, 185, 255);
+		}
+		p {
+			color: rgb(128, 128, 128);
+			font-weight: 400;
+		}
+		.pricetable {
+			a{}
+			.pricerow {
+				border: 1px solid rgba(0, 110, 151, 0.3);
+				border-width: 0px 0px 1px;
+
+				@media screen and (max-width: 991px) {
+					padding: 0px;
+				}
+				a{}
+				&:first-child{
+					border-width: 1px 0px;
+				}
+			}
+			.pricecell {
+				padding: 5px;
+
+				color: #4e4e4e;
+				font-size: 2rem;
+				text-transform: uppercase;
+				font-weight: 600;
+
+				border: 1px solid rgba(0, 110, 151, 0.3);
+				border-width: 0px 1px 0px 0px;
+
+				@media screen and (max-width: 991px) {
+					padding: 10px;
+				}	
+				a{}
+				&:last-child{
+					border-width: 0px 0px 0px 0px;
+				}
+				span {
+					@media screen and (max-width: 991px) {
+						display: block;
+						font-size: 0.5em;
+						line-height: 0px;
+					}
+				}
+			}
+		}
+	}	
+	.form-group {
+		max-width: 800px;
+		margin: 80px auto 30px;
+
+		a{}
+		h3 {
+			margin: 0px 0px 20px;
+			font-size: 3rem;
+			color: rgb(0, 110, 152);
+			text-transform: uppercase;
+		}
+		h4 {
+			margin-top: 20px;
+			font-size: 2rem;
+			color: rgb(0, 185, 255);
+		}
+		p {
+			color: rgb(128, 128, 128);
+			font-weight: 400;
+		}
+		input,textarea {
+			columns: grey;
+			font-size: 1.3rem;
+		}
+		textarea {
+			min-height: 200px;
+		}
+	}
+}
