@@ -262,8 +262,6 @@ white-space: normal;
 											<thead>
 												<tr>
 													<th>สนใจเลือกเรียนสาขาอะไรมากที่สุด (แบบสอบถาม)</th>
-													<th>Total</th>
-
 												</tr>
 											</thead>
 										</table>
