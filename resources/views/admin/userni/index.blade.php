@@ -104,7 +104,7 @@
                      <div class="form-group ">
                        <label class="col-md-4 control-label"></label>
                        <div class="col-md-8">
-                         <form class="form-horizontal" action="{{url('admin/user_2_search')}}" method="GET" enctype="multipart/form-data">
+                         <form class="form-horizontal" action="{{url('admin/user_regis_search')}}" method="GET" enctype="multipart/form-data">
                            {{ csrf_field() }}
                          <div class="input-group input-search">
                            <input type="text" class="form-control" name="q" placeholder="Search..." required>

@@ -29,6 +29,42 @@ class User_regisController extends Controller
       return view('admin.userni.user_export', $data);
     }
 
+
+    public function user_regis_search(Request $request)
+    {
+      $this->validate($request, [
+        'q' => 'required'
+      ]);
+
+      $search = $request->get('q');
+
+      $objs = DB::table('registrations')
+              ->select(
+              'registrations.*'
+              )
+              ->where('name', 'like', "%$search%")
+              ->orWhere('school_name', 'like', "%$search%")
+              ->paginate(15);
+
+
+              $get_count = DB::table('registrations')
+                      ->select(
+                      'registrations.*'
+                      )
+                      ->where('name', 'like', "%$search%")
+                      ->orWhere('school_name', 'like', "%$search%")
+                      ->count();
+
+                      $data['count'] = $get_count;
+                      $data['objs'] = $objs;
+                      $data['search'] = $search;
+                      $data['datahead'] = "รายชื่อผู้ลงทะเบียน";
+
+
+                      return view('admin.userni.search', $data);
+
+    }
+
     /**
      * Show the form for creating a new resource.
      *

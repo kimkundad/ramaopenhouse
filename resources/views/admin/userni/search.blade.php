@@ -93,24 +93,21 @@
 
                 <div class="row">
                    <div class="col-md-4">
-                     <a class="btn btn-default" href="{{url('admin/user_2/create')}}" role="button"><i class="fa fa-plus"></i> เพิ่มรายชื่อใหม่</a>
-
-                     <!-- popup -->
 
 
-
+                     <a class="btn btn-default" target="_blank" href="{{url('admin/user_export')}}" role="button"><i class="fa fa-file-excel-o"></i> Export Excel</a>
 
                    </div>
 
                    <div class="col-md-8 pull-right">
-                     <br>
+
                      <div class="form-group ">
                        <label class="col-md-4 control-label"></label>
                        <div class="col-md-8">
                          <form class="form-horizontal" action="{{url('admin/user_2_search')}}" method="GET" enctype="multipart/form-data">
                            {{ csrf_field() }}
                          <div class="input-group input-search">
-                           <input type="text" class="form-control" name="q" value="{{$search}}" placeholder="Search..." required>
+                           <input type="text" class="form-control" name="q" placeholder="Search..." required>
                            <span class="input-group-btn">
                              <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
                            </span>
@@ -131,13 +128,12 @@
                 <table id="example" class="table table-striped " cellspacing="0" width="100%">
                   <thead>
                     <tr>
-                      <th>#</th>
-                      <th>รอบงาน</th>
-                      <th>ชื่อ-นามสกุล</th>
-                      <th>ตำแหน่ง</th>
-                      <th>สาขา</ht>
-                      <th>พื้นที่</th>
 
+                      <th>ชื่อ-นามสกุล</th>
+                      <th>อายุ</th>
+                      <th>ระดับการศึกษา</th>
+                      <th>สถานศึกษา</th>
+                      <th>เกรดเฉลี่ยรวม</th>
                       <th>จัดการ</th>
                     </tr>
                   </thead>
@@ -145,141 +141,140 @@
                     @if($objs)
                 @foreach($objs as $u)
                     <tr>
-                      <td>{{$u->code_id}}</td>
-                      <td>
-                        @if($u->part_day == 0)
-                        รอบบ่าย
-                        @else
-                        รอบเช้า
-                        @endif
-                      </td>
-                      <td>
-                        @if($u->star_user == 1)
-                        <i class="ap-questions-featured fa fa-graduation-cap"></i>
-                        @endif
-                        {{$u->name}}</td>
-                      <td>{{$u->job_title}}</td>
-                      <td><?=mb_substr(strip_tags($u->current_branch),0,32,'UTF-8')?></td>
-                      <td><?=mb_substr(strip_tags($u->area),0,25,'UTF-8')?></td>
+                      <td>{{$u->prefix_name}} {{$u->name}} {{$u->surname}}</td>
+
+                      <td>{{$u->age}}</td>
+                      <td>{{$u->educational_background}}</td>
+                      <td>{{$u->educational_plan}}</td>
+                      <td>{{$u->gpax}}</td>
 
                       <td>
 
-                        @if($u->status == 0)
-                          <a type="button" style="float:left; margin: 3px;" class="btn btn-warning btn-xs"><i class="fa fa-meh-o"></i></a>
-                             @else
-                             <a type="button" style="float:left; margin: 3px;" class="btn btn-success btn-xs"><i class="fa fa-star"></i></a>
-                             @endif
+                        <a style="float:left; margin: 3px; font-size: 10px; padding: 1px 3px;" class="btn btn-primary btn-xs modal-sizes"
+                         href="#modalSM-{{$u->id}}" role="button"><i class="fa fa-graduation-cap"></i> </a>
 
-
-
-
-                        <a style="float:left; margin: 3px;" class="btn btn-primary btn-xs modal-sizes"
-                         href="#modalSM-{{$u->id}}" role="button"><i class="fa fa-wrench"></i> </a>
-
-                          <form  action="{{url('')}}" method="post" onsubmit="return(confirm('Do you want Delete'))">
+                          <form  action="{{url('admin/user_regis/'.$u->id)}}" method="post" onsubmit="return(confirm('Do you want Delete'))">
                             <input type="hidden" name="_method" value="DELETE">
                              <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                            <button type="submit" class="btn btn-danger btn-xs" style="margin: 3px;"><i class="fa fa-times "></i></button>
+                            <button type="submit" class="btn btn-danger btn-xs" style="margin: 3px; font-size: 10px;"><i class="fa fa-times "></i></button>
                           </form>
 
 
 
 
-
-
-
-
-
                           <!-- popup -->
-                           <div id="modalSM-{{$u->id}}" class="modal-block modal-block-sm mfp-hide">
+                           <div id="modalSM-{{$u->id}}" class="modal-block modal-block-mm mfp-hide">
 										<section class="panel">
                     <!--  <form  action="{{url('admin/user_2/post_update')}}" method="post"  > -->
                      <form id="cutproduct1">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <input type="hidden" name="user_id" value="{{$u->id}}">
 											<header class="panel-heading">
-												<h2 class="panel-title">แก้ไข {{$u->name}}?</h2>
+												<h2 class="panel-title">แก้ไข {{$u->prefix_name}} {{$u->name}} {{$u->surname}}?</h2>
 											</header>
 											<div class="panel-body">
-												<div class="modal-wrapper">
+												<div class="modal-wrapper" style="padding-top:10px;">
                           <div class="modal-text">
 
-                            <div class="form-group">
-                              <label for="inputPassword3" class=" control-label"><b>Code ID :</b> {{$u->code_id}}</label>
-                              <input type="hidden" class="form-control" id="code_id" value="{{$u->code_id}}">
+
+
+                            <div class="form-group" style="margin-bottom: 5px;">
+                              <label for="inputPassword3" class=" control-label"><b>ชื่อ-นามสกุล :</b>  {{$u->prefix_name}} {{$u->name}} {{$u->surname}}</label>
+
                            </div>
 
-                            <div class="form-group">
-                              <label for="inputPassword3" class=" control-label"><b>ชื่อ-นามสกุล :</b> @if($u->star_user == 1)
-                              <i class="ap-questions-featured fa fa-graduation-cap"></i>
-                              @endif {{$u->name}}</label>
-                              <input type="hidden" class="form-control" id="name" value="{{$u->name}}">
-                           </div>
 
-                           <div class="form-group">
-                             <label for="inputPassword3"  class=" control-label"><b>รอบ :</b> @if($u->part_day == 0)
-                             รอบบ่าย
-                             @else
-                             รอบเช้า
-                             @endif</label>
-                             <input type="hidden" class="form-control" id="part_day" value="{{$u->part_day}}">
+                           <div class="form-group" style="margin-bottom: 5px;">
+                             <label for="inputPassword3" class=" control-label"><b>อายุ :</b> {{$u->age}}</label>
+
                           </div>
 
-                           <div class="form-group">
-                             <label for="inputPassword3" class=" control-label"><b>ตำแหน่ง :</b> {{$u->job_title}}</label>
-                             <input type="hidden" class="form-control" id="job_title" value="{{$u->job_title}}">
-                          </div>
+                          <div class="form-group" style="margin-bottom: 5px;">
+                            <label for="inputPassword3" class=" control-label"><b>ระดับการศึกษา :</b> {{$u->educational_background}}</label>
 
-                          <div class="form-group">
-                            <label for="inputPassword3" class=" control-label"><b>สาขา :</b> {{$u->current_branch}}</label>
-                            <input type="hidden" class="form-control" id="current_branch" value="{{$u->current_branch}}">
                          </div>
 
-                         <div class="form-group">
-                           <label for="inputPassword3" class=" control-label"><b>พื้นที่ :</b> {{$u->area}}</label>
-                           <input type="hidden" class="form-control" id="area" value="{{$u->area}}">
+                         <div class="form-group" style="margin-bottom: 5px;">
+                           <label for="inputPassword3" class=" control-label"><b>แผนการศึกษา :</b> {{$u->educational_plan}}</label>
+
                         </div>
 
-                        <div class="form-group">
-                          <label for="inputPassword3" class=" control-label"><b>หมายเหตุ :</b> {{$u->remark}}
-                            @if($u->star_user == 1)
-                            <i class="ap-questions-featured fa fa-graduation-cap"></i> รายชื่อพิเศษ
-                            @endif
+                        <div class="form-group" style="margin-bottom: 5px;">
+                          <label for="inputPassword3" class=" control-label"><b>สถานศึกษา :</b> {{$u->school_name}}
                           </label>
 
                           <input type="hidden" id="id_user" class="form-control" name="id"   value="{{ $u->id }}" >
                         </div>
 
 
+                        <div class="form-group" style="margin-bottom: 5px;">
+                          <label for="inputPassword3" class=" control-label"><b>เกรดเฉลี่ยรวม :</b> {{$u->gpax}}</label>
+                       </div>
+                       <br>
+                       <h5 style="color:#000">ลำดับคณะที่ให้ความสนใจ</h5>
+                       <hr>
+                      <div class="form-group" style="margin-bottom: 5px;">
+                        <label for="inputPassword3" class=" control-label"><b>อันดับที่ 1 :</b>
+                          @if($u->edu_rank_1 == 0)
+                            หลักสูตรแพทยศาสตรบัณฑิต
+                          @elseif($u->edu_rank_1 == 1)
+                            หลักสูตรพยาบาลศาสตรบัณฑิต
+                          @elseif($u->edu_rank_1 == 2)
+                            หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาปฏิบัติการฉุกเฉินทางการแพทย
+                          @else
+                            หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาความผิดปกติของการสื่อความหมาย
+                          @endif
+                          </label>
+                     </div>
 
+                     <div class="form-group" style="margin-bottom: 5px;">
+                       <label for="inputPassword3" class=" control-label"><b>อันดับที่ 2 :</b> @if($u->edu_rank_2 == 0)
+                         หลักสูตรแพทยศาสตรบัณฑิต
+                       @elseif($u->edu_rank_2 == 1)
+                         หลักสูตรพยาบาลศาสตรบัณฑิต
+                       @elseif($u->edu_rank_2 == 2)
+                         หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาปฏิบัติการฉุกเฉินทางการแพทย
+                       @else
+                         หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาความผิดปกติของการสื่อความหมาย
+                       @endif</label>
+                    </div>
 
-                               <div class="form-group">
-                                 <label for="inputPassword3" class=" control-label">การร่วมกิจกรรม</label>
-                               <select class="form-control" id="status_user" name="status_user">
-                                <option value="">--เลือกสิทธิการเข้าร่วม--</option>
+                    <div class="form-group" style="margin-bottom: 5px;">
+                      <label for="inputPassword3" class=" control-label"><b>อันดับที่ 3 :</b> @if($u->edu_rank_3 == 0)
+                        หลักสูตรแพทยศาสตรบัณฑิต
+                      @elseif($u->edu_rank_3 == 1)
+                        หลักสูตรพยาบาลศาสตรบัณฑิต
+                      @elseif($u->edu_rank_3 == 2)
+                        หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาปฏิบัติการฉุกเฉินทางการแพทย
+                      @else
+                        หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาความผิดปกติของการสื่อความหมาย
+                      @endif</label>
+                   </div>
 
+                   <div class="form-group" style="margin-bottom: 5px;">
+                     <label for="inputPassword3" class=" control-label"><b>อันดับที่ 4 :</b> @if($u->edu_rank_4 == 0)
+                       หลักสูตรแพทยศาสตรบัณฑิต
+                     @elseif($u->edu_rank_4 == 1)
+                       หลักสูตรพยาบาลศาสตรบัณฑิต
+                     @elseif($u->edu_rank_4 == 2)
+                       หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาปฏิบัติการฉุกเฉินทางการแพทย
+                     @else
+                       หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาความผิดปกติของการสื่อความหมาย
+                     @endif</label>
+                  </div>
 
-                                <option value="0" @if( $u->status == 0)
-                                                                  selected="selected"
-                                                                  @endif >ยังไม่มา</option>
-                                <option value="1" @if( $u->status == 1)
-                                                                  selected="selected"
-                                                                  @endif >ได้เข้าร่วมงานแล้ว</option>
-
-                              </select>
-                              </div>
 
 													</div>
 												</div>
 											</div>
 											<footer class="panel-footer">
-												<div class="row">
-													<div class="col-md-12 text-right">
+                        <div class="row">
+              <div class="col-md-12 text-right">
 
-                             <a class="tooltip_flip tooltip-effect-1 btn btn-primary" type="button" id="submit">แก้ไข</a>
-														<button class="btn btn-default modal-dismiss">ยกเลิก</button>
-													</div>
-												</div>
+
+                <button class="btn btn-default modal-dismiss">ยกเลิก</button>
+              </div>
+            </div>
 											</footer>
                       </form>
 										</section>
@@ -287,17 +282,17 @@
 
 
 
+
+
                       </td>
-
-
-                      </tr>
+                    </tr>
                        @endforeach
               @endif
 
                   </tbody>
                 </table>
                 </div>
-
+<div class="pagination"> {{ $objs->links() }} </div>
               </div>
             </section>
 
@@ -310,106 +305,6 @@
 
 
 @section('scripts')
-<script src="{{url('node_modules/socket.io-client/dist/socket.io.js')}}"></script>
-<script>
-$(document).ready(function(){
-
-
-
-$('.tooltip_flip.tooltip-effect-1').click(function(e){
-  e.preventDefault();
-
-
-  var $form = $(this).closest("form#cutproduct1");
-            var formData =  $form.serializeArray();
-
-
-            var dataString = {
-                  code_id : $form.find("#code_id").val(),
-                   name : $form.find("#name").val(),
-                   part_day : $form.find("#part_day").val(),
-                   job_title : $form.find("#job_title").val(),
-                   current_branch : $form.find("#current_branch").val(),
-                   area : $form.find("#area").val(),
-                   id_user : $form.find("#id_user").val(),
-                   status_user : $form.find("#status_user").val(),
-                   _token : '{{ csrf_token() }}'
-                 };
-
-
-
-    $.ajax({
-        type: "POST",
-        url: "{{url('admin/user_2/post_update')}}",
-        data: dataString,
-        dataType: "json",
-        cache : false,
-        success: function(data){
-
-
-          if(data.success == true){
-
-          //  $("#notif").html(data.notif);
-
-            var socket = io.connect( 'http://'+window.location.hostname+':3000' );
-
-            socket.emit('new_count_message', {
-              new_count_message: data.new_count_message,
-              all_count_message: data.all_count_message,
-              count_user_all_new: data.count_user_all_new
-            });
-
-            socket.emit('new_message', {
-              code_id: data.code_id,
-              name: data.name,
-              part_day: data.part_day,
-              job_title: data.job_title,
-              current_branch: data.current_branch,
-              area: data.area,
-              income_time: data.income_time
-            });
-          //  alert(data.phone_bit);
-          //  window.location.reload();
-
-
-
-
-
-              PNotify.prototype.options.styling = "fontawesome";
-              new PNotify({
-                    title: 'ยินดีด้วยค่ะ',
-                    text: 'ทำการเพิ่มผู้ลงทะเบียนใหม่',
-                    type: 'success'
-                  });
-
-
-
-          } else if(data.success == false){
-
-            $("#name").val(data.name);
-
-          }
-
-          var delayMillis = 2200; //1 second
-
-
-
-          setTimeout(function() {
-            window.location = "{{url('admin/user_2')}}";
-          }, delayMillis);
-
-
-
-        } ,error: function(xhr, status, error) {
-          alert(error);
-        },
-
-    });
-
-});
-
-});
-</script>
 
 
 
@@ -424,7 +319,7 @@ new PNotify({
 </script>
 @endif
 
-@if ($message = Session::get('success'))
+@if ($message = Session::get('delete'))
 <script type="text/javascript">
 PNotify.prototype.options.styling = "fontawesome";
 new PNotify({
