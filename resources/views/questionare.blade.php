@@ -403,7 +403,7 @@
           </div>
           <div class="col-12">
             <div class="form-group">
-              <textarea id="q_11" class="form-control" name="q_11" rows="3" required>{{ old('q_11') }}</textarea>
+              <textarea id="q_11" class="form-control" name="q_11" rows="3">{{ old('q_11') }}</textarea>
             </div>
           </div>
         </div>
