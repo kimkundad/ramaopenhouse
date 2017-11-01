@@ -261,7 +261,7 @@ white-space: normal;
 										<table class="table table-striped mb-none">
 											<thead>
 												<tr>
-													<th>สนใจเลือกเรียนสาขาอะไรมากที่สุด (แบบสอบถาม)</th>
+													<th>สถานที่ในการจัดกิจกรรม เหมาะสมหรือไม่? (แบบสอบถาม)</th>
 												</tr>
 											</thead>
 										</table>
