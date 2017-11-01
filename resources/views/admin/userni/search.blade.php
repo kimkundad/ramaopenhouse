@@ -95,7 +95,7 @@
                    <div class="col-md-4">
 
 
-                     <a class="btn btn-default" target="_blank" href="{{url('admin/user_export')}}" role="button"><i class="fa fa-file-excel-o"></i> Export Excel</a>
+                     <a class="btn btn-default" target="_blank" href="{{url('admin/user_export2?q='.$search)}}" role="button"><i class="fa fa-file-excel-o"></i> Export Excel</a>
 
                    </div>
 

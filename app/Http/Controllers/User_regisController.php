@@ -29,6 +29,61 @@ class User_regisController extends Controller
       return view('admin.userni.user_export', $data);
     }
 
+    public function user_export2(Request $request){
+
+      $search = $request->get('q');
+
+
+      $get_count = DB::table('registrations')
+              ->select(
+              'registrations.*'
+              )
+              ->where('name', 'like', "%$search%")
+              ->orWhere('surname', 'like', "%$search%")
+              ->orWhere('school_name', 'like', "%$search%")
+              ->count();
+
+      if($get_count == 0){
+
+        $arr_str=explode(" ",$search);
+
+        $get_count = DB::table('registrations')
+                ->select(
+                'registrations.*'
+                )
+                ->where('name', 'like', "%$arr_str[0]%")
+                ->orWhere('surname', 'like', "%$arr_str[0]%")
+                ->orWhere('school_name', 'like', "%$arr_str[0]%")
+                ->count();
+
+        $objs = DB::table('registrations')
+                ->select(
+                'registrations.*'
+                )
+                ->where('name', 'like', "%$arr_str[0]%")
+                ->orWhere('surname', 'like', "%$arr_str[0]%")
+                ->orWhere('school_name', 'like', "%$arr_str[0]%")
+                ->get();
+
+      } else{
+
+        $objs = DB::table('registrations')
+                ->select(
+                'registrations.*'
+                )
+                ->where('name', 'like', "%$search%")
+                ->orWhere('surname', 'like', "%$search%")
+                ->orWhere('school_name', 'like', "%$search%")
+                ->get();
+
+      }
+
+      $data['objs'] = $objs;
+      $data['objs_count'] = $objs_count;
+      return view('admin.userni.user_export', $data);
+
+    }
+
 
     public function user_regis_search(Request $request)
     {
