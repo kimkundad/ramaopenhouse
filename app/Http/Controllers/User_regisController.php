@@ -21,6 +21,14 @@ class User_regisController extends Controller
       return view('admin.userni.index', $data);
     }
 
+    public function user_export(){
+      $objs = registration::all();
+      $objs_count = registration::count();
+      $data['objs'] = $objs;
+      $data['objs_count'] = $objs_count;
+      return view('admin.userni.user_export', $data);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

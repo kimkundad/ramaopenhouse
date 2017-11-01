@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+RewriteCond %{http_host} ^kavarinamy\.com$ [NC]
+RewriteRule ^(.*)$ https://www.kavarinamy.com/$1 [R=301,L]

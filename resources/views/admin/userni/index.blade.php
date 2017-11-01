@@ -94,8 +94,8 @@
                 <div class="row">
                    <div class="col-md-4">
 
-                     <!-- popup -->
 
+                     <a class="btn btn-default" target="_blank" href="{{url('admin/user_export')}}" role="button"><i class="fa fa-plus"></i> Export Excel</a>
 
                    </div>
 
