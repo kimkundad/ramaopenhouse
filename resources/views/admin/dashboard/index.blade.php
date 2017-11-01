@@ -203,15 +203,13 @@ white-space: normal;
 
 
             <div class="col-md-6">
-
               <section class="panel">
-								
+
 								<div class="panel-body" style="font-size: 14px;">
 									<div class="table-responsive" >
 										<table class="table table-striped mb-none">
 											<thead>
 												<tr>
-
 													<th>สนใจเลือกเรียนสาขาอะไรมากที่สุด (แบบสอบถาม)</th>
 													<th>Total</th>
 
@@ -240,10 +238,38 @@ white-space: normal;
 													<td><span class="label label-warning">{{$count_question_09_4}}</span></td>
 												</tr>
 
-
-
 											</tbody>
 										</table>
+									</div>
+								</div>
+							</section>
+
+            </div>
+
+
+
+
+
+
+
+
+            <div class="col-md-6">
+              <section class="panel">
+
+								<div class="panel-body" style="font-size: 14px;">
+									<div class="table-responsive" >
+										<table class="table table-striped mb-none">
+											<thead>
+												<tr>
+													<th>สนใจเลือกเรียนสาขาอะไรมากที่สุด (แบบสอบถาม)</th>
+													<th>Total</th>
+
+												</tr>
+											</thead>
+										</table>
+
+                    <div class="chart chart-md" id="flotPie"></div>
+
 									</div>
 								</div>
 							</section>
@@ -267,6 +293,49 @@ white-space: normal;
 @stop
 
 @section('scripts')
+
+<script src="{{url('assets/vendor/flot/jquery.flot.js')}}"></script>
+<script src="{{url('assets/vendor/flot/jquery.flot.pie.js')}}"></script>
+
+<script>
+$(document).ready(function(){
+    $.ajax({
+        url: '{{url('api/get_chart')}}', // getchart.php
+        dataType: 'JSON',
+        type: 'GET',
+       // dataType: 'jsonp',
+        data: {
+        	id: "4",
+              },
+        success: function(response) {
+
+
+
+		var plot = $.plot('#flotPie', response, {
+			series: {
+				pie: {
+					show: true,
+					combine: {
+						color: '#999',
+						threshold: 0.1
+					}
+				}
+			},
+			legend: {
+				show: false
+			},
+			grid: {
+				hoverable: true,
+				clickable: true
+			}
+		});
+
+
+}
+    });
+
+});
+</script>
 
 
 

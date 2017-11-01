@@ -42,6 +42,6 @@ Route::group(['middleware' => 'admin'], function() {
 
   Route::resource('admin/user_questionare', 'User_questionareController');
   Route::get('/admin/questionare_export', 'User_questionareController@questionare_export');
-
+  Route::get('api/get_chart', 'DashboardController@get_chart');
 
 });

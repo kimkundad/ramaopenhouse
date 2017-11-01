@@ -63,6 +63,42 @@ class DashboardController extends Controller
 
     }
 
+    public function get_chart(){
+
+      $get_count1 = DB::table('questionares')
+                ->where('question_01', 1)
+                ->count();
+
+                $get_count2 = DB::table('questionares')
+                          ->where('question_01', 2)
+                          ->count();
+
+                          $get_count3 = DB::table('questionares')
+                                    ->where('question_01', 3)
+                                    ->count();
+
+
+                                    $get_count4 = DB::table('questionares')
+                                              ->where('question_01', 4)
+                                              ->count();
+
+                                              $get_count5 = DB::table('questionares')
+                                                        ->where('question_01', 5)
+                                                        ->count();
+
+
+                $arr[0] = [ 'label' => 'ควรปรับปรุง', 'data' =>[[1, $get_count1]],'color' => '#0088cc' ];
+                $arr[1] = [ 'label' => 'พอใช้', 'data' =>[[1, $get_count2]],'color' => '#2baab1' ];
+                $arr[2] = [ 'label' => 'ปานกลาง', 'data' =>[[1, $get_count3]],'color' => '#734ba9' ];
+                $arr[3] = [ 'label' => 'ดี', 'data' =>[[1, $get_count4]],'color' => '#E36159' ];
+                $arr[4] = [ 'label' => 'ดีมาก', 'data' =>[[1, $get_count5]],'color' => '#f0ad4e' ];
+
+              return response()->json($arr);
+
+    }
+
+
+
     /**
      * Show the form for creating a new resource.
      *
