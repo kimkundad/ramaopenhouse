@@ -205,11 +205,7 @@ white-space: normal;
             <div class="col-md-6">
 
               <section class="panel">
-								<header class="panel-heading panel-heading-transparent">
-
-
-									<h2 class="panel-title">&nbsp</h2>
-								</header>
+								
 								<div class="panel-body" style="font-size: 14px;">
 									<div class="table-responsive" >
 										<table class="table table-striped mb-none">
