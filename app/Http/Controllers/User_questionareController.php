@@ -21,7 +21,7 @@ class User_questionareController extends Controller
       return view('admin.questionare.index', $data);
     }
 
-    public function user_export(){
+    public function questionare_export(){
       $objs = questionare::all();
       $objs_count = questionare::count();
       $data['objs'] = $objs;
