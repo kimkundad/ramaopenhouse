@@ -26,6 +26,11 @@ class DashboardController extends Controller
       $count_edu_rank_3 = registration::where('edu_rank_3', 2)->count();
       $count_edu_rank_4 = registration::where('edu_rank_4', 3)->count();
 
+      $count_question_09_1 = questionare::where('question_09', 1)->count();
+      $count_question_09_2 = questionare::where('question_09', 2)->count();
+      $count_question_09_3 = questionare::where('question_09', 3)->count();
+      $count_question_09_4 = questionare::where('question_09', 4)->count();
+
       $count_man = registration::where('prefix_name', 'นาย')
       ->orwhere('prefix_name', 'ด.ช.')
       ->count();
@@ -47,6 +52,11 @@ class DashboardController extends Controller
       $data['count_edu_rank_2'] = $count_edu_rank_2;
       $data['count_edu_rank_3'] = $count_edu_rank_3;
       $data['count_edu_rank_4'] = $count_edu_rank_4;
+
+      $data['count_question_09_1'] = $count_question_09_1;
+      $data['count_question_09_2'] = $count_question_09_2;
+      $data['count_question_09_3'] = $count_question_09_3;
+      $data['count_question_09_4'] = $count_question_09_4;
 
       return view('admin.dashboard.index', $data);
 

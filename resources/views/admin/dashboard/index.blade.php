@@ -157,7 +157,7 @@ white-space: normal;
 											<thead>
 												<tr>
 
-													<th>ลำดับคณะที่ให้ความสนใจ อันดับที่ 1</th>
+													<th>ลำดับคณะที่ให้ความสนใจ อันดับที่ 1 (ลงทะเบียน)</th>
 													<th>Total</th>
 
 												</tr>
@@ -194,6 +194,68 @@ white-space: normal;
 							</section>
 
             </div>
+
+
+
+
+
+
+
+
+            <div class="col-md-6">
+
+              <section class="panel">
+								<header class="panel-heading panel-heading-transparent">
+
+
+									<h2 class="panel-title">&nbsp</h2>
+								</header>
+								<div class="panel-body" style="font-size: 14px;">
+									<div class="table-responsive" >
+										<table class="table table-striped mb-none">
+											<thead>
+												<tr>
+
+													<th>สนใจเลือกเรียนสาขาอะไรมากที่สุด (แบบสอบถาม)</th>
+													<th>Total</th>
+
+												</tr>
+											</thead>
+											<tbody>
+
+												<tr>
+													<td><i class="fa fa-user text-success"></i> หลักสูตรแพทยศาสตรบัณฑิต</td>
+													<td><span class="label label-success">{{$count_question_09_1}}</span></td>
+												</tr>
+
+                        <tr>
+													<td><i class="fa fa-user text-primary"></i> หลักสูตรพยาบาลศาสตรบัณฑิต</td>
+													<td><span class="label label-primary">{{$count_question_09_2}}</span></td>
+												</tr>
+
+
+                        <tr>
+													<td><i class="fa fa-user text-danger"></i> สาขาวิชาความผิดปกติของการสื่อความหมาย</td>
+													<td><span class="label label-danger">{{$count_question_09_3}}</span></td>
+												</tr>
+
+                        <tr>
+													<td><i class="fa fa-user text-warning"></i> สาขาวิชาปฏิบัติการฉุกเฉินทางการแพทย์</td>
+													<td><span class="label label-warning">{{$count_question_09_4}}</span></td>
+												</tr>
+
+
+
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</section>
+
+            </div>
+
+
+
 
 
 											</div>
