@@ -79,7 +79,7 @@ class User_regisController extends Controller
       }
 
       $data['objs'] = $objs;
-      $data['objs_count'] = $objs_count;
+      $data['objs_count'] = $get_count;
       return view('admin.userni.user_export', $data);
 
     }
