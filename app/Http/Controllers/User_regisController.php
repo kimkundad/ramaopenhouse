@@ -38,24 +38,46 @@ class User_regisController extends Controller
 
       $search = $request->get('q');
 
-      $objs = DB::table('registrations')
+
+      $get_count = DB::table('registrations')
               ->select(
               'registrations.*'
               )
               ->where('name', 'like', "%$search%")
               ->orWhere('surname', 'like', "%$search%")
               ->orWhere('school_name', 'like', "%$search%")
-              ->paginate(15);
+              ->count();
+
+      if($get_count == 0){
+
+        $arr_str=explode(" ",$search);
+
+        $objs = DB::table('registrations')
+                ->select(
+                'registrations.*'
+                )
+                ->where('name', 'like', "%$arr_str[0]%")
+                ->orWhere('surname', 'like', "%$arr_str[0]%")
+                ->orWhere('school_name', 'like', "%$arr_str[0]%")
+                ->paginate(15);
+
+      } else{
+
+        $objs = DB::table('registrations')
+                ->select(
+                'registrations.*'
+                )
+                ->where('name', 'like', "%$search%")
+                ->orWhere('surname', 'like', "%$search%")
+                ->orWhere('school_name', 'like', "%$search%")
+                ->paginate(15);
+
+      }
 
 
-              $get_count = DB::table('registrations')
-                      ->select(
-                      'registrations.*'
-                      )
-                      ->where('name', 'like', "%$search%")
-                      ->orWhere('surname', 'like', "%$search%")
-                      ->orWhere('school_name', 'like', "%$search%")
-                      ->count();
+
+
+
 
                       $data['count'] = $get_count;
                       $data['objs'] = $objs;
