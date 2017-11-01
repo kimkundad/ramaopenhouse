@@ -43,6 +43,14 @@ html.no-overflowscrolling .nano > .nano-pane > .nano-slider {
 									</li>
 
 
+                  <li {{ (Request::is('admin/user_questionare*') ? 'class=nav-expanded' : '') }} >
+										<a href="{{url('admin/user_questionare/')}}" >
+											<i class="fa fa-cube" aria-hidden="true"></i>
+											<span>แบบสอบถาม</span>
+										</a>
+									</li>
+
+
 
 
 

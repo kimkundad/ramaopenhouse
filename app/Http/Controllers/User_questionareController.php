@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\registration;
+use App\questionare;
 use Illuminate\Support\Facades\DB;
 
-class User_regisController extends Controller
+class User_questionareController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,18 +15,18 @@ class User_regisController extends Controller
      */
     public function index()
     {
-      $objs = registration::paginate(15);
+      $objs = questionare::paginate(15);
       $data['objs'] = $objs;
-      $data['datahead'] = "รายชื่อผู้ลงทะเบียน";
-      return view('admin.userni.index', $data);
+      $data['datahead'] = "รวมแบบสอบถาม";
+      return view('admin.questionare.index', $data);
     }
 
     public function user_export(){
-      $objs = registration::all();
-      $objs_count = registration::count();
+      $objs = questionare::all();
+      $objs_count = questionare::count();
       $data['objs'] = $objs;
       $data['objs_count'] = $objs_count;
-      return view('admin.userni.user_export', $data);
+      return view('admin.questionare.questionare_export', $data);
     }
 
     /**
@@ -92,14 +92,11 @@ class User_regisController extends Controller
      */
     public function destroy($id)
     {
-      $obj = registration::find($id);
+      $obj = questionare::find($id);
       $obj->delete();
 
     //  echo $objs->image;;
-      return redirect(url('admin/user_regis'))
+      return redirect(url('admin/user_questionare'))
       ->with('delete','ทำการลบ บทความ สำเร็จ');
-
-
-
     }
 }

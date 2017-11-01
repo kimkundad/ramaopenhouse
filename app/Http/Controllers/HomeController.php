@@ -75,7 +75,7 @@ class HomeController extends Controller
      $package->edu_rank_2 = $request['edu_rank_2'];
      $package->edu_rank_3 = $request['edu_rank_3'];
      $package->edu_rank_4 = $request['edu_rank_4'];
-     $package->time_stamp = date('H:i:s', strtotime('+7 hour'));
+     $package->time_stamp = date('H:i', strtotime('+7 hour'));
      $package->save();
 
       return view('thanks_registration');
@@ -111,7 +111,7 @@ class HomeController extends Controller
       $package->question_09 = $request['q_9'];
       $package->question_10 = $request['q_10'];
       $package->q11_text = $request['q_11'];
-      $package->time_stamp = date('H:i:s', strtotime('+7 hour'));
+      $package->time_stamp = date('H:i', strtotime('+7 hour'));
       $package->save();
 
        return view('thanks_questionare');

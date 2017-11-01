@@ -36,5 +36,8 @@ Route::group(['middleware' => 'admin'], function() {
   Route::resource('admin/user_regis', 'User_regisController');
   Route::get('/admin/user_export', 'User_regisController@user_export');
 
+  Route::resource('admin/user_questionare', 'User_questionareController');
+  Route::get('/admin/questionare_export', 'User_questionareController@questionare_export');
+
 
 });

@@ -95,7 +95,7 @@
                    <div class="col-md-4">
 
 
-                     <a class="btn btn-default" target="_blank" href="{{url('admin/user_export')}}" role="button"><i class="fa fa-plus"></i> Export Excel</a>
+                     <a class="btn btn-default" target="_blank" href="{{url('admin/user_export')}}" role="button"><i class="fa fa-file-excel-o"></i> Export Excel</a>
 
                    </div>
 
@@ -131,7 +131,7 @@
 
                       <th>ชื่อ-นามสกุล</th>
                       <th>อายุ</th>
-                      <th>ระดับการศึกษา</ht>
+                      <th>ระดับการศึกษา</th>
                       <th>สถานศึกษา</th>
                       <th>เกรดเฉลี่ยรวม</th>
                       <th>จัดการ</th>
@@ -153,7 +153,7 @@
                         <a style="float:left; margin: 3px; font-size: 10px; padding: 1px 3px;" class="btn btn-primary btn-xs modal-sizes"
                          href="#modalSM-{{$u->id}}" role="button"><i class="fa fa-graduation-cap"></i> </a>
 
-                          <form  action="{{url('')}}" method="post" onsubmit="return(confirm('Do you want Delete'))">
+                          <form  action="{{url('admin/user_regis/'.$u->id)}}" method="post" onsubmit="return(confirm('Do you want Delete'))">
                             <input type="hidden" name="_method" value="DELETE">
                              <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <button type="submit" class="btn btn-danger btn-xs" style="margin: 3px; font-size: 10px;"><i class="fa fa-times "></i></button>
@@ -319,7 +319,7 @@ new PNotify({
 </script>
 @endif
 
-@if ($message = Session::get('success'))
+@if ($message = Session::get('delete'))
 <script type="text/javascript">
 PNotify.prototype.options.styling = "fontawesome";
 new PNotify({
