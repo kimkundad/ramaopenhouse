@@ -43,6 +43,7 @@ class User_regisController extends Controller
               'registrations.*'
               )
               ->where('name', 'like', "%$search%")
+              ->orWhere('surname', 'like', "%$search%")
               ->orWhere('school_name', 'like', "%$search%")
               ->paginate(15);
 
@@ -52,6 +53,7 @@ class User_regisController extends Controller
                       'registrations.*'
                       )
                       ->where('name', 'like', "%$search%")
+                      ->orWhere('surname', 'like', "%$search%")
                       ->orWhere('school_name', 'like', "%$search%")
                       ->count();
 
