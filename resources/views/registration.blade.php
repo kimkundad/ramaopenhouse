@@ -30,7 +30,7 @@
         <div class="col-12 text-center">
           <div class="subheader">
             <h5 class="color-head">แบบฟอร์มการลงทะเบียน เข้าเยี่ยมชมบูธ</h5>
-            <h5 class="description">คณะแพทย์ศาสตร์โรงพยาบาลรามาธิบดี</h5>
+            <h5 class="description">คณะแพทยศาสตร์โรงพยาบาลรามาธิบดี</h5>
           </div>
         </div>
       </div>

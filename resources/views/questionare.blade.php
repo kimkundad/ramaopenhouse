@@ -32,11 +32,11 @@
         <div class="col-12 text-center">
           <div class="subheader">
             <h1 class="color-head">แบบสอบถาม</h1>
-            <h5 class="description">เกี่ยวกับ คณะแพทย์ศาสตร์โรงพยาบาลรามาธิบดี</h5>
+            <h5 class="description">เกี่ยวกับ คณะแพทยศาสตร์โรงพยาบาลรามาธิบดี</h5>
             <h5 class="description">ในงานเปิดบ้านมหิดล 60' มหาวิทยาลัยมหิดล</h5>
             <h6 class="place">3 - 4 พฤศจิกายน 2560</h6>
-            <h6 class="place">สถานที่ อาหารพัฒนดล</h6>
-            <h6 class="place">คณะสิ่งแวดล้อมมหาวิทยาลัมหิดล ศาลายา</h6>
+            <h6 class="place">สถานที่ อาคารพัฒนดล</h6>
+            <h6 class="place">คณะสิ่งแวดล้อมมหาวิทยาลัยมหิดล ศาลายา</h6>
           </div>
         </div>
       </div>
