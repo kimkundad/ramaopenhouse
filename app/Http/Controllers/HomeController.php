@@ -95,8 +95,7 @@ class HomeController extends Controller
      'q_7' => 'required',
      'q_8' => 'required',
      'q_9' => 'required',
-     'q_10' => 'required',
-     'q_11' => 'required'
+     'q_10' => 'required'
       ]);
 
       $package = new questionare;
