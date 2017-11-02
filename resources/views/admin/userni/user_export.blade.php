@@ -8,6 +8,7 @@ header("Expires: 0");
 echo '<table border="1">';
 //make the column headers what you want in whatever order you want
 echo '<tr>
+	<th> คำนำหน้าชื่อ </th>
 	<th> ชื่อ-นามสกุล </th>
 	<th> อายุ </th>
 	<th> ระดับการศึกษา </th>
@@ -45,7 +46,8 @@ return "$strDay $strMonthThai $strYear";
 	@foreach($objs as $u)
 
     <tr>
-			<td>{{$u->prefix_name}} {{$u->name}} {{$u->surname}}</td>
+			<td>{{$u->prefix_name}}</td>
+			<td> {{$u->name}} {{$u->surname}}</td>
 			<td>{{$u->age}}</td>
 			<td>{{$u->educational_background}}</td>
 			<td>{{$u->educational_plan}}</td>
